@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 // JS7
 use App\Http\Controllers\MahasiswaController;
 use Illuminate\Http\Request;
@@ -21,7 +22,10 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 #JS7
 Route::resource('mahasiswas', MahasiswaController::class);
+
+#JS9 - Latihan
+Route::get('mahasiswas/nilai/{Nim}', [MahasiswaController::class, 'khs']);

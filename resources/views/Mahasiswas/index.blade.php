@@ -54,6 +54,7 @@
             <form action="{{ route('mahasiswas.destroy',$Mahasiswa->Nim) }}" method="POST">
 
             <a class="btn btn-info" href="{{ route('mahasiswas.show',$Mahasiswa->Nim) }}">Show</a>
+            <a class="btn btn-primary" href="{{ route('mahasiswas.edit',$Mahasiswa->Nim) }}">Edit</a> <!-- JS9 - Latihan -->
             <a class="btn btn-warning" href="/mahasiswas/nilai/{{ $Mahasiswa->Nim }}">Nilai </a>
         @csrf
         @method('DELETE')

@@ -25,4 +25,14 @@ class Mahasiswa extends Model
         'Email',
         'Tanggal_Lahir'
     ];
+
+    #JS9 - Latihan
+    public function kelas()
+    {
+        return $this->belongsTo(kelas::class);
+    }
+
+    public function mataKuliah(){
+        return $this->belongsToMany(Matakuliah::class, "mahasiswa_matakuliah", "mahasiswa_id", "matakuliah_id")->withPivot('nilai');
+    }
 };
