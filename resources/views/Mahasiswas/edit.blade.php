@@ -59,6 +59,7 @@
                         <input type="date" name="Tanggal_Lahir" class="form-control" id="Tanggal_Lahir" value="{{ $Mahasiswa->Tanggal_Lahir }}" aria-describedby="Tanggal_Lahir" > 
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
+                    <a class="btn btn-secondary" href="{{ route('mahasiswas.index') }}">Batal</a>
                 </form>
             </div>
         </div>
