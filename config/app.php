@@ -155,6 +155,8 @@ return [
     */
 
     'providers' => [
+        //JS10
+        Barryvdh\DomPDF\ServiceProvider::class,
 
         /*
          * Laravel Framework Service Providers...
@@ -210,6 +212,7 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'ExampleClass' => App\Example\ExampleClass::class,
+        //JS10
+        'PDF' => Barryvdh\DomPDF\Facade::class,
     ])->toArray(),
-
 ];

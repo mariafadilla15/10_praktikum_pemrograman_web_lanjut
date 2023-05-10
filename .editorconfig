@@ -16,3 +16,13 @@ indent_size = 2
 
 [docker-compose.yml]
 indent_size = 4
+
+
+# Article Controller
+use Barryvdh\DomPDF\Facade\PDF;
+...
+public function cetak_pdf(){
+        $articles = Article::all();
+        $pdf = PDF::loadview('articles.articles_pdf', ['articles'=>$articles]);
+        return $pdf->stream();
+}

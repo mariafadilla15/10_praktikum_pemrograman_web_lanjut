@@ -33,4 +33,5 @@ Route::resource('mahasiswas', MahasiswaController::class);
 Route::get('mahasiswas/nilai/{Nim}', [MahasiswaController::class, 'khs']);
 
 #JS10 - Praktikum 1
-ROute::resource('articles', ArticleController::class);
+Route::resource('articles', ArticleController::class);
+Route::get('/article/cetak_pdf', [App\Http\Controllers\ArticleController::class, 'cetak_pdf']);
