@@ -5,6 +5,8 @@ use App\Http\Controllers\HomeController;
 // JS7
 use App\Http\Controllers\MahasiswaController;
 use Illuminate\Http\Request;
+//JS10
+use App\Http\Controllers\ArticleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +31,6 @@ Route::resource('mahasiswas', MahasiswaController::class);
 
 #JS9 - Latihan
 Route::get('mahasiswas/nilai/{Nim}', [MahasiswaController::class, 'khs']);
+
+#JS10 - Praktikum 1
+ROute::resource('articles', ArticleController::class);
